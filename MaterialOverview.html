@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>9to5seating</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/slick.css">
+  <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/productdetails.css">
+  <link rel="stylesheet" href="css/MaterialOverview.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="jquery-3.7.1.min.js"></script>
+  <script src="https://kit.fontawesome.com/e6a4030994.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+  <!--stylesheets / link tags loaded here-->
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .container {
+      margin: 150px auto;
+    }
+
+    .container.chairimages {
+      /* padding: 0 50px; */
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+  </style>
+  <script>
+
+    $(document).ready(function () {
+      // executes when HTML-Document is loaded and DOM is ready
+
+      // breakpoint and up  
+      $(window).resize(function () {
+        if ($(window).width() >= 980) {
+
+          // when you hover a toggle show its dropdown menu
+          $(".navbar .dropdown-toggle").hover(function () {
+            $(this).parent().toggleClass("show");
+            $(this).parent().find(".dropdown-menu").toggleClass("show");
+          });
+
+          // hide the menu when the mouse leaves the dropdown
+          $(".navbar .dropdown-menu").mouseleave(function () {
+            $(this).removeClass("show");
+          });
+
+          // do something here
+        }
+      });
+
+
+
+      // document ready  
+    });
+
+
+
+  </script>
+
+
+
+  <style type="text/css">
+
+  </style>
+
+  <script>
+
+    // $("#show").click(function () {
+    //   // console.log("Its running",$("#modelboxopen"))
+
+
+    //   // $("#hide").click(function(){
+    //   //   console.log("Its running but sec")
+    //   //   $("#modelboxopen").show();
+    //   // });
+    // });
+
+    function modelshowHideBox(hideEle, showEleId) {
+
+      $("#modelboxopen").toggle(200);
+      console.log("haa bhai", showEleId, document.getElementById(showEleId))
+      // document.getElementById('modelboximg').style.display="none"
+      hideEle.style.display = "none"
+      document.getElementById(showEleId).style.display = "block"
+
+    }
+    function backshowHideBox(hideEle, showEleId) {
+
+      $("#backstyleboxopen").toggle(200);
+      console.log("haa bhai", showEleId, document.getElementById(showEleId))
+      hideEle.style.display = "none"
+      document.getElementById(showEleId).style.display = "block"
+
+    }
+    function armshowHideBox(hideEle, showEleId) {
+
+      $("#armstyleboxopen").toggle(200);
+      console.log("haa bhai", showEleId, document.getElementById(showEleId))
+      // document.getElementById('modelboximg').style.display="none"
+      hideEle.style.display = "none"
+      document.getElementById(showEleId).style.display = "block"
+
+    }
+    function mechanismshowHideBox(hideEle, showEleId) {
+
+      $("#mechanismboxopen").toggle(200);
+      console.log("haa bhai", showEleId, document.getElementById(showEleId))
+      // document.getElementById('modelboximg').style.display="none"
+      hideEle.style.display = "none"
+      document.getElementById(showEleId).style.display = "block"
+
+    }
+    function baseshowHideBox(hideEle, showEleId) {
+
+      $("#baseoptionsboxopen").toggle(200);
+      console.log("haa bhai", showEleId, document.getElementById(showEleId))
+      // document.getElementById('modelboximg').style.display="none"
+      hideEle.style.display = "none"
+      document.getElementById(showEleId).style.display = "block"
+
+    }
+
+    function brochureshowHideBox(hideEle, showEleId) {
+
+      $("#brochureboxopen").toggle(200);
+      console.log("haa bhai", showEleId, document.getElementById(showEleId))
+      // document.getElementById('modelboximg').style.display="none"
+      hideEle.style.display = "none"
+      document.getElementById(showEleId).style.display = "block"
+
+    }
+
+    function awardbtn(){
+      console.log("hit hua",awardcol)
+      
+      document.getElementById("awardcol").style.borderBottom = '2px solid '
+      document.getElementById("spotlightcol").style.borderBottom = '1px solid #DEDEDE'
+    }
+    function spotlightbtn(){
+      console.log("hit hua",awardcol)
+      
+      document.getElementById("awardcol").style.borderBottom = '1px solid #DEDEDE '
+      document.getElementById("spotlightcol").style.borderBottom = '2px solid #212529'
+    }
+
+    function gallerypopup(){
+      console.log("ho to raha h",gallerypopupbox)
+      document.getElementById("gallerypopupbox").style.width='100%'
+      document.getElementById("gallerypopupbox").style.height="100%"
+      document.getElementById("gallerypopupbox").style.position="fixed"
+      // document.getElementById("gallerypopupbox").style.backgroundColor="white"
+      document.getElementById("gallerypopupbox").style.zIndex="10000"
+      document.getElementById("gallerypopupbox").style.top="0px"
+      document.getElementById("gallerypopupbox").style.display="block"
+      document.getElementById("gallerypopupbox").style.backdropFilter="blur(100px)"
+      document.getElementById("gallerypopupbox").style.overflow="auto"
+      document.body.style.overflow="hidden"
+      
+
+    }
+    function gallerypopupclose(){
+      document.getElementById("gallerypopupbox").style.width='0%'
+      document.getElementById("gallerypopupbox").style.height="0%"
+      document.getElementById("gallerypopupbox").style.display="none"
+      document.body.style.overflow="visible"
+    }
+
+    function environmentbtn(){
+      document.getElementById("productimgid").style.borderBottom = '1px solid #DEDEDE '
+      document.getElementById("environmentid").style.borderBottom = '2px solid #212529'
+    }
+    function productbtn(){
+      document.getElementById("environmentid").style.borderBottom = '1px solid #DEDEDE '
+      document.getElementById("productimgid").style.borderBottom = '2px solid #212529'
+    }
+
+  </script>
+
+
+
+</head>
+
+<body>
+
+
+
+
+
+
+
+  <div class="chrd">
+
+    <ul class="list-unstyled tops-link msk">
+
+      <li><a href="#" class="txt-white">Chair Designer</a></li>
+      <li><a href="#" class="txt-white">Contracts</a></li>
+      <li><a href="#" class="txt-white">Dealer Portal</a></li>
+      <li><a href="#" class="txt-white">Order Tracking</a></li>
+
+    </ul>
+
+
+  </div>
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark ">
+    <a class="navbar-brand logsp" href="#"><img src="images/9to5 Seating - Red.svg" class="logo-9to5" alt="" /></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
+        class="navbar-toggler-icon"></span> </button>
+    <div id="navbarSupportedContent" class="collapse navbar-collapse ">
+      <div class="sbnv">
+
+        <div id="mobile-menu">
+          <div class="dsk">
+            <div>
+              <button type="button" class="firstnar" onclick="setVisibility('menu-seating', 'show');">SEATING<img
+                  src="images/menu-arrow.svg" align="right" class="imspc" alt="" /></button>
+            </div>
+            <div id="menu-seating">
+              <div class="">
+                <div>
+                  <div class="dsk-small">
+                    <button type="button" value='Hide Layer' onclick="setVisibility('menu-seating', 'hide');"
+                      class="f8 backseating brnone"><img src="images/back.svg" alt="" />Back to Seating</button>
+                  </div>
+                  <div class="dsk"><a href="#">Task</a></div>
+                  <div class="dsk"><a href="#">Conference</a></div>
+                  <div class="dsk"><a href="#">Lounge</a></div>
+                  <div class="dsk"><a href="#">Stacking</a></div>
+                  <div class="dsk"><a href="#">Nesting</a></div>
+                  <div class="dsk"><a href="#">Stools</a></div>
+                  <div class="dsk"><a href="#">@NCE (Ships in 24 hours)</a></div>
+                  <div class="dsk"><a href="#">All Seating</a></div>
+
+                  <div class="dsk">
+                    <div>
+                      <button type="button" class="firstnar"
+                        onclick="setVisibility('menu-seating-at', 'show');">APPLICATION TYPE<img
+                          src="images/menu-arrow.svg" align="right" class="i" alt="" /></button>
+                    </div>
+
+                    <div id="menu-seating-at">
+
+                      <div class="">
+                        <div>
+                          <div class="dsk-small"><button type="button" value='Hide Layer'
+                              onclick="setVisibility('menu-seating-at', 'hide');" style=" border-top: none;"
+                              class="f8 backseating"><img src="images/back.svg" alt="" />Back to Application
+                              Type</button></div>
+
+                          <div class="dsk"><a href="#">Business</a></div>
+
+
+                          <div class="dsk"><a href="#">Education/Training</a></div>
+
+                          <div class="dsk"><a href="#">Healthcare</a></div>
+
+                          <div class="dsk"><a href="#">Heavy Duty</a></div>
+
+                          <div class="dsk"><a href="#">Hospitality</a></div>
+
+
+
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                  </div>
+
+
+
+                  <div class="dsk">
+                    <button type="button" class="firstnar" value='Show Layer'
+                      onclick="setVisibility('sub5', 'inline');">BACK TYPE<img src="images/menu-arrow.svg" align="right"
+                        class="mtrs" alt="" /></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dsk">
+            <button type="button" class="firstnar" value='Show Layer'
+              onclick="setVisibility('', 'inline');">Materials<img src="images/menu-arrow.svg" align="right"
+                class="imspc" alt="" /></button>
+          </div>
+          <div class="dsk">
+            <button type="button" class="firstnar" value='Show Layer'
+              onclick="setVisibility('', 'inline');">Resources<img src="images/menu-arrow.svg" align="right"
+                class="imspc" alt="" /></button>
+          </div>
+          <div class="dsk">
+            <button type="button" class="firstnar" value='Show Layer' onclick="setVisibility('', 'inline');">Industry
+              Solutions<img src="images/menu-arrow.svg" align="right" class="imspc" alt="" /></button>
+          </div>
+          <div class="dsk">
+            <button type="button" class="firstnar" value='Show Layer'
+              onclick="setVisibility('', 'inline');">Insights<img src="images/menu-arrow.svg" align="right"
+                class="imspc" alt="" /></button>
+          </div>
+          <div class="dsk">
+            <button type="button" class="firstnar" value='Show Layer' onclick="setVisibility('', 'inline');">About
+              us<img src="images/menu-arrow.svg" align="right" class="imspc" alt="" /></button>
+          </div>
+          <div class="dsk2"><a href="#">Chair Designer</a></div>
+          <div class="dsk2"> <a href="#">Contracts<a></a></div>
+          <div class="dsk2"> <a href="#">Dealer Portal<a></a></div>
+          <div class="dsk2"> <a href="#">Order Tracking</a></div>
+          <div class="dsk2">
+            <button type="button" class="button-red">SHOP</button>
+          </div>
+        </div>
+      </div>
+      <div class="collapse navbar-collapse bg-whitens">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item drparw"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> SEATING </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <div class="drp-dd">
+                <div class="row">
+                  <div class="col-md-4">
+                    <ul class="nav flex-column">
+                      <li class="nav-item"> <a class="nav-link " href="#">Task</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#">Conference</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#">Side/Guest</a> </li>
+                    </ul>
+                  </div>
+                  <!-- /.col-md-4  -->
+                  <div class="col-md-4">
+                    <ul class="nav flex-column">
+                      <li class="nav-item"> <a class="nav-link " href="#">Lounge</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#">Stacking</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#">Nesting</a> </li>
+                    </ul>
+                  </div>
+                  <!-- /.col-md-4  -->
+                  <div class="col-md-4">
+                    <ul class="nav flex-column">
+                      <li class="nav-item"> <a class="nav-link " href="#">Stools</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#" style="line-height: 22px;">@NCE (Ships in 24
+                          hours)ooo</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#">All Seating</a> </li>
+                    </ul>
+                  </div>
+                  <!-- /.col-md-4  -->
+                </div>
+                <div class="brds"></div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <ul class="nav flex-column">
+                      <li class="grds">Application type</li>
+                      <li class="nav-item"> <a class="nav-link " href="#">Business</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#"> Education/Training </a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#">Healthcare</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#">Heavy Duty</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#">Hospitality</a> </li>
+                    </ul>
+                  </div>
+                  <!-- /.col-md-4  -->
+                  <div class="col-md-4">
+                    <ul class="nav flex-column">
+                      <li class="grds">Back Type</li>
+                      <li class="nav-item"> <a class="nav-link " href="#">Mesh</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#">Plastic</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#">Upholstered</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#">Not Applicable</a> </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!--  /.container  -->
+
+            </div>
+          </li>
+          <li class="nav-item drparw"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> MATERIALS </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <div class="drp-dd">
+                <div class="row">
+                  <div class="col-md-4">
+                    <ul class="nav flex-column">
+                      <li class="nav-item"> <a class="nav-link " href="#">Materials Overview</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#">Fabric Cards</a> </li>
+                    </ul>
+                  </div>
+                  <!-- /.col-md-4  -->
+                  <div class="col-md-4">
+                    <ul class="nav flex-column">
+                      <li class="nav-item"> <a class="nav-link " href="#">Textile Partners</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#">Request Memo Sample</a> </li>
+                    </ul>
+                  </div>
+                  <!-- /.col-md-4  -->
+                  <div class="col-md-4">
+                    <ul class="nav flex-column">
+                      <li class="nav-item"> <a class="nav-link " href="#">Graded in Textiles</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#">COM Textiles</a> </li>
+                    </ul>
+                  </div>
+                  <!-- /.col-md-4  -->
+                </div>
+                <div class="brds"></div>
+                <div class="grds">material type</div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <ul class="nav flex-column">
+                      <li class="nav-item"> <a class="nav-link " href="#">Fabric</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#">Leather</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#">Mesh</a> </li>
+                    </ul>
+                  </div>
+                  <!-- /.col-md-4  -->
+                  <div class="col-md-4">
+                    <ul class="nav flex-column">
+                      <li class="nav-item"> <a class="nav-link " href="#">Metal</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#">Plastic</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#">Polyurethane</a> </li>
+                    </ul>
+                  </div>
+                  <!-- /.col-md-4  -->
+                  <div class="col-md-4">
+                    <ul class="nav flex-column">
+                      <li class="nav-item"> <a class="nav-link " href="#">Vinyl</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#">Wood</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#">All Materials</a> </li>
+                    </ul>
+                  </div>
+                  <!-- /.col-md-4  -->
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item drparw"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> RESOURCES </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <div class="drp-dd">
+                <div class="row">
+                  <div class="col-md-4">
+                    <ul class="nav flex-column">
+                      <li class="nav-item"> <a class="nav-link  " href="#">Product Downloads</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#">Media Gallery</a> </li>
+                    </ul>
+                  </div>
+                  <!-- /.col-md-4  -->
+                  <div class="col-md-4">
+                    <ul class="nav flex-column">
+                      <li class="nav-item"> <a class="nav-link " href="#">Chair Designer</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#">Order Literature</a> </li>
+                    </ul>
+                  </div>
+                  <!-- /.col-md-4  -->
+
+                  <!-- /.col-md-4  -->
+                </div>
+                <div class="brds"></div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <ul class="nav flex-column">
+                      <li class="grds nav-item"> <a class="nav-link " href="#">Contracts</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#">State Contracts </a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#">Cooperative Contracts</a> </li>
+                    </ul>
+                  </div>
+                  <!-- /.col-md-4  -->
+                  <div class="col-md-4">
+                    <ul class="nav flex-column">
+                      <li class="nav-item grds"> <a class="nav-link " href="#">Additional Resources</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#">Control Guide </a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#">Warranty Information</a> </li>
+                    </ul>
+                  </div>
+                  <!-- /.col-md-4  -->
+                  <div class="col-md-4">
+                    <ul class="nav flex-column">
+                      <li class="nav-item"> <a class="nav-link " href="#">&nbsp;</a> </li>
+                      <li class="nav-item"> <a class="nav-link " href="#">Warranty Request</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#">Product Updates</a> </li>
+                    </ul>
+                  </div>
+                  <!-- /.col-md-4  -->
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item drparw"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> INDUSTRY SOLUTIONS </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <div class="drp-dd">
+                <div class="row industry-m">
+                  <div class="col-md-4">
+                    <ul class="nav flex-column">
+                      <li class="nav-item"> <a class="nav-link " href="#">Commercial</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#">Healthcare</a> </li>
+                    </ul>
+                  </div>
+                  <!-- /.col-md-4  -->
+                  <div class="col-md-4">
+                    <ul class="nav flex-column">
+                      <li class="nav-item"> <a class="nav-link " href="#">Education</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#">Work from Home</a> </li>
+                    </ul>
+                  </div>
+                  <!-- /.col-md-4  -->
+
+                  <!-- /.col-md-4  -->
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item drparw"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> INSIGHTS </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <div class="drp-dd">
+                <div class="row industry-m">
+                  <div class="col-md-4">
+                    <ul class="nav flex-column">
+                      <li class="nav-item"> <a class="nav-link " href="#">News/Blog</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#">Awards</a> </li>
+                    </ul>
+                  </div>
+                  <!-- /.col-md-4  -->
+                  <div class="col-md-4">
+                    <ul class="nav flex-column">
+                      <li class="nav-item"> <a class="nav-link " href="#">Project Spotlight</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#">Plant Tour</a> </li>
+                    </ul>
+                  </div>
+                  <!-- /.col-md-4  -->
+                  <div class="col-md-4">
+                    <ul class="nav flex-column">
+                      <li class="nav-item"> <a class="nav-link " href="#">Showroom Virtual Tours</a> </li>
+                    </ul>
+                  </div>
+                  <!-- /.col-md-4  -->
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item drparw"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> ABOUT US </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <div class="drp-dd">
+                <div class="row" style="width: 90%; margin: 0px auto;">
+                  <div class="col-md-4">
+                    <ul class="nav flex-column">
+                      <li class="nav-item"> <a class="nav-link " href="#">Our Story</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#">Sustainability</a> </li>
+                    </ul>
+                  </div>
+                  <!-- /.col-md-4  -->
+                  <div class="col-md-4">
+                    <ul class="nav flex-column">
+                      <li class="nav-item"> <a class="nav-link " href="#">Sales Rep Locator</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#">Contact Us</a> </li>
+                    </ul>
+                  </div>
+                  <!-- /.col-md-4  -->
+
+                  <!-- /.col-md-4  -->
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div>
+          <button type="button" class="button-shop">Shop</button>
+        </div>
+        <div class="mmts">
+          <form class="searchbar">
+            <input type="search" placeholder="Search here" name="search" class="searchbar-input" onkeyup="buttonUp();"
+              required>
+            <input type="submit" class="searchbar-submit" value="GO">
+            <span class="searchbar-icon"><img src="images/search.svg" alt="" /></span>
+          </form>
+        </div>
+      </div>
+  </nav>
+
+<section>
+    <div class="overviewcontainer">
+      <div class="container d-flex justify-content-center align-items-center flex-column mt-0 mb-0" style="height: 100%;width: 100%;">
+          <div class="overviewhead pt-4">
+              MATERIALS OVERVIEW
+          </div>
+          
+          <hr class="overviewhr">
+          
+          <div class="overviewpara text-center pb-4">
+              Textiles are vital to creating inspiring <br> workspaces. Learn more about our offering for <br> your performance needs and design vision.
+          </div>
+      </div>
+  </div>
+  <div style="margin: 60px 90px 60px 90px;" >
+    <div class="row justify-content-center align-items-center">
+        <div class="col-lg-2 col-sm-4 materialgrid mr-4 d-flex justify-content-center align-items-end">
+            <div class="position-relative">
+                <img src="/images/9to5-allimages/9to5-images/Desktop/materials-overview/materials overview-plastic.jpg" alt="">
+            </div>
+            <div class="position-absolute " >
+                MATERIALS LIBRARY
+            </div>
+        </div>
+        <div class="col-lg-2 col-sm-4 materialgrid  mr-4  d-flex justify-content-center align-items-end">
+            <div class="position-relative">
+                <img src="/images/9to5-allimages/9to5-images/Desktop/materials-overview/materials overview-plastic.jpg" alt="">
+            </div>
+            <div class="position-absolute " style="bottom: 0px;margin: 0 auto;margin-left: 34px;">
+                GRADED-IN TEXTILES
+            </div>
+        </div>
+        <div class="col-lg-2 col-sm-2 materialgrid mr-4 d-flex justify-content-center align-items-end">
+            <div class="position-relative">
+                <img src="/images/9to5-allimages/9to5-images/Desktop/materials-overview/materials overview-plastic.jpg" alt="">
+            </div>
+            <div class="position-absolute " style="bottom: 0px;margin: 0 auto;margin-left: 34px;">
+                COM TEXTILES
+            </div>
+        </div>
+        <div class="col-lg-2 col-sm-2 materialgrid p-0">
+            <div class="position-relative">
+                <img src="/images/9to5-allimages/9to5-images/Desktop/materials-overview/materials overview-plastic.jpg" alt="">
+            </div>
+            <div class="position-absolute " style="bottom: 0px;margin: 0 auto;margin-left: 34px;">
+                FIND A MESH
+            </div>
+        </div>
+        <div class="col-lg-2 col-sm-2 materialgrid p-0">
+            <div class="position-relative">
+                <img src="/images/9to5-allimages/9to5-images/Desktop/materials-overview/materials overview-plastic.jpg" alt="">
+            </div>
+            <div class="position-absolute " style="bottom: 0px;margin: 0 auto;margin-left: 34px;">
+                FIND A PLASTIC
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+  <div class="footerbg footerspc">
+
+
+    <div class="row">
+      <div class="col-lg-1"><img src="images/9to5 Seating - White.png" width="84" height="61" alt="" /></div>
+      <div class="col-lg-3">3211 Jack Northrop Ave. Hawthorne, CA 90250
+        P: 888.925.7328 | F: 310.220.2501
+        Customer Care 6:00 am - 5:00 pm (PST)
+        Shipping & Receiving 8:00 am - 4:30 pm (PST)</div>
+      <div class="col-lg-3 privacy-policy-spc">
+        <ul class="list-unstyled">
+          <li> <a href="#" class="link-white">Privacy Policy</a></li>
+          <li> <a href="#" class="link-white">Terms & Conditions</a></li>
+          <li> <a href="#" class="link-white">Sign Up for Latest News & Update</a></li>
+          <li> <a href="#" class="link-white">Careers at 9to5</a></li>
+
+        </ul>
+
+
+
+      </div>
+
+
+      <div class="col-lg-3 flok-cont dfs">
+
+        <div>Part of Flock Family of Brands</div>
+
+        <div class="spc-folk">
+          <a href="https://www.flokk.com/global" target="_blank"> <img src="images/flok.png" width="64" height="18"
+              alt="" /></a>
+        </div>
+      </div>
+
+
+
+
+
+
+      <div class="col-lg-2">
+
+        <div class="socialicon">
+
+          <a href="https://www.facebook.com/9to5Seating/" target="_blank"><i class="fa fa-facebook"
+              aria-hidden="true"></i></a>
+
+          <a href="https://twitter.com/9to5seating" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+
+          <a href="https://www.instagram.com/9to5seating/?hl=en" target="_blank"><i class="fa fa-instagram"
+              aria-hidden="true"></i></a>
+          <a href="https://www.youtube.com/channel/UCCNf6LE6PyN58-oxIaphuXg" target="_blank"><i
+              class="fa fa-youtube-play " aria-hidden="true"></i></a>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+      </div>
+
+
+
+      <div>
+
+
+
+
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+  <script src="js/slick.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+    $(document).on('ready', function () {
+
+
+      $(".center").slick({
+        dots: true,
+        infinite: true,
+        centerMode: true,
+        slidesToShow: 1,
+        slidesToScroll: 3
+      });
+
+
+
+      $(".center2").slick({
+        dots: true,
+        infinite: true,
+        centerMode: true,
+        slidesToShow: 2,
+        slidesToScroll: 3
+      });
+
+
+      $(".regular").slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      });
+
+
+
+
+      $(".variable").slick({
+        dots: true,
+        slidesToShow: 2.6,
+        infinite: false,
+
+      });
+
+
+
+    });
+  </script>
+
+  <!--<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+	-->
+
+
+  <script language="JavaScript">
+    function setVisibility(id, visibility) {
+      document.getElementById(id).style.display = visibility;
+    }
+  </script>
+
+
+
+  <script>
+
+    $(document).ready(function () {
+      var submitIcon = $('.searchbar-icon');
+      var inputBox = $('.searchbar-input');
+      var searchbar = $('.searchbar');
+      var isOpen = false;
+      submitIcon.click(function () {
+        if (isOpen == false) {
+          searchbar.addClass('searchbar-open');
+          inputBox.focus();
+          isOpen = true;
+        } else {
+          searchbar.removeClass('searchbar-open');
+          inputBox.focusout();
+          isOpen = false;
+        }
+      });
+      submitIcon.mouseup(function () {
+        return false;
+      });
+      searchbar.mouseup(function () {
+        return false;
+      });
+      $(document).mouseup(function () {
+        if (isOpen == true) {
+          $('.searchbar-icon').css('display', 'block');
+          submitIcon.click();
+        }
+      });
+    });
+    function buttonUp() {
+      var inputVal = $('.searchbar-input').val();
+      inputVal = $.trim(inputVal).length;
+      if (inputVal !== 0) {
+        $('.searchbar-icon').css('display', 'none');
+      } else {
+        $('.searchbar-input').val('');
+        $('.searchbar-icon').css('display', 'block');
+      }
+    }
+
+
+
+
+  </script>
+
+
+
+
+
+</body>
+
+</html>
+
